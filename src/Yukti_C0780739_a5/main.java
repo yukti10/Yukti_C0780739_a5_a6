@@ -4,7 +4,7 @@ import javax.swing.*;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.*;
+
 
 public class main {
 
@@ -21,8 +21,9 @@ public class main {
                 break;
             } else {
                 JOptionPane.showMessageDialog(f, "Incorrect credentials.");
-                if (count == 2) ;
-                JOptionPane.showMessageDialog(f, "You have exceeded the number of attempts");
+                if (count == 2) {
+                    JOptionPane.showMessageDialog(f, "You have exceeded the number of attempts");
+                }
 
             }
             count++;
@@ -31,7 +32,7 @@ public class main {
     }
 
     static void options() {
-        if (Login() == true) {
+        if (Login()) {
             JPanel jp = new JPanel();
             JTextField fName = new JTextField(5);
             JTextField lName = new JTextField(5);
@@ -77,28 +78,28 @@ public class main {
             double serviceCost=0;
             double itemCost=0;
             double optionsCost =0;
-            if (servicesPackageA.isSelected()==true){
+            if (servicesPackageA.isSelected()){
                 total += p1.getPackageAService();
                 serviceCost+=p1.getPackageAService();
             }
-            if (servicesPackageB.isSelected()==true){
+            if (servicesPackageB.isSelected()){
                 total += p1.getPackageBService();
                 serviceCost+=p1.getPackageBService();
             }
-            if (optionsStorageSmall.isSelected()==true){
+            if (optionsStorageSmall.isSelected()){
                 total += p1.getStorageSmall();
                 optionsCost+=p1.getStorageSmall();
 
             }
-            if (optionsStorageLarge.isSelected()==true){
+            if (optionsStorageLarge.isSelected()){
                 total += p1.getStorageLarge();
                 optionsCost+=p1.getStorageLarge();
             }
-            if (itemsBoxesSmall.isSelected()==true){
+            if (itemsBoxesSmall.isSelected()){
                 total += p1.getBoxesSmall();
                 itemCost+=p1.getBoxesSmall();
             }
-            if (itemsBoxesLarge.isSelected()==true){
+            if (itemsBoxesLarge.isSelected()){
                 total += p1.getBoxesLarge();
                 itemCost+=p1.getBoxesLarge();
             }
